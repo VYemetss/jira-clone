@@ -7,6 +7,8 @@ import {
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { DottedSeparator } from "@/components/dotted-separator";
+import {FcGoogle} from "react-icons/fc";
+import {FaGithub} from "react-icons/fa";
 
 export const SignInCard = () => {
     return (
@@ -46,9 +48,11 @@ export const SignInCard = () => {
             </div>
             <CardContent className={'p-7 flex flex-col gap-y-4'}>
                 <Button disabled={false} variant={'secondary'} size={'lg'} className={'w-full'}>
+                    <FcGoogle className={'mr-2 size-5'}></FcGoogle>
                     Login with Google
                 </Button>
                 <Button disabled={false} variant={'secondary'} size={'lg'} className={'w-full'}>
+                    <FaGithub className={'mr-2 size-5'}></FaGithub>
                     Login with Github
                 </Button>
             </CardContent>
