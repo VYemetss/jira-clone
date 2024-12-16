@@ -12,6 +12,7 @@ import {FaGithub} from "react-icons/fa";
 import {z} from "zod";
 import {zodResolver} from "@hookform/resolvers/zod";
 import {useForm} from "react-hook-form";
+import Link from "next/link"
 import {
     Form,
     FormControl,
@@ -98,6 +99,15 @@ export const SignInCard = () => {
                     <FaGithub className={'mr-2 size-5'}></FaGithub>
                     Login with Github
                 </Button>
+            </CardContent>
+            <div className={'px-7'}>
+                <DottedSeparator/>
+            </div>
+            <CardContent className={"p-7 flex justify-center items-center"}>
+                <p>Don&apos;t have an account?</p>
+                <Link href={"/sign-up"}>
+                    <span className={'text-blue-700'}>&nbsp;Sign Up</span>
+                </Link>
             </CardContent>
         </Card>
     );
